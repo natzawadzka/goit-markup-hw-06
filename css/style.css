@@ -196,7 +196,7 @@ ul {
   margin-bottom: 8px;
 }
 
-.goals-list {
+.goals-list:not(:last-child) {
   margin-bottom: 72px;
 }
 
@@ -242,6 +242,7 @@ ul {
 .team-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 72px;
 }
 
@@ -261,7 +262,7 @@ ul {
 
 .third-section {
   background-color: #ffffff;
-  flex-basis: calc((100% - 3 * 72px) / 4);
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -292,7 +293,7 @@ ul {
 
 .our-team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .third-section-text {
@@ -439,7 +440,7 @@ ul {
 
 .container {
   max-width: 320px;
-  padding: 0 auto;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -720,7 +721,7 @@ p {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 
   .section-goals {
@@ -728,10 +729,10 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 24px;
+    gap: 72px 24px;
   }
   .goals-list {
-    width: calc((100% - 72px) / 2);
+    width: 356px;
   }
 
   .icon-list {
@@ -752,19 +753,17 @@ p {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 64px 24px;
   }
 
-  .third-section {
-    flex-basis: calc((100% - 2 * 24px) / 4);
+  .third-header {
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
   }
   .section-goals {
     display: flex;
