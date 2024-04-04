@@ -8,6 +8,7 @@ body {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 16px 0;
 }
 
 .navigation {
@@ -58,6 +59,7 @@ ul {
   display: flex;
   gap: 40px;
   padding: 24px 0 24px 0;
+  display: none;
 }
 
 .current {
@@ -128,19 +130,13 @@ ul {
   height: 100%;
   background-color: #fff;
   transform: translateX(100%);
+  padding: 72px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 250ms;
 }
 
-.menu-mobile-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 320px;
-  min-height: 640px;
-  background-color: #fff;
-}
-
-.menu-mobile-window is-open {
+.menu-mobile-container.is-open {
   transform: translateX(0%);
 }
 
@@ -185,7 +181,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 72px;
 }
 
 .nav-link-mobile {
@@ -206,7 +201,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 168px;
+  margin-top: auto;
 }
 
 .mobile-contact-link {
@@ -224,18 +219,18 @@ ul {
 
 .main-header {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 107%;
+  font-size: 36px;
+  line-height: 111%;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  max-width: 200px;
   margin: 0 auto;
 }
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -376,7 +371,7 @@ ul {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 
 .social-media-icons-list {
@@ -410,13 +405,13 @@ ul {
 }
 
 .fourth-section {
-  padding: 103px 16px 96px 16px;
+  padding: 96px 0;
 }
 
 .portfolio-items {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
 }
 
 .portfolio-item {
@@ -424,12 +419,12 @@ ul {
 }
 
 .fourth-section-paragraph {
-  margin-bottom: 32px;
   font-weight: 400px;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
+  margin-top: 8px;
 }
 
 .fourth-section h3 {
@@ -494,16 +489,12 @@ ul {
 
 .container-footer {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-direction: column;
-}
-
-.footer-left {
-  margin-bottom: 72px;
+  gap: 72px;
 }
 
 .sm-container {
-  margin-bottom: 72px;
   align-self: center;
 }
 
@@ -925,6 +916,7 @@ p {
     flex-wrap: wrap;
     align-items: center;
     gap: 72px 24px;
+    max-width: 530px;
   }
 
   .nav-link {
@@ -932,6 +924,10 @@ p {
   }
 
   .address {
+    display: flex;
+  }
+
+  .nav-links {
     display: flex;
   }
 
@@ -950,7 +946,7 @@ p {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/people_office_mobile@2x.jpg);
+        url(../images/people_office_tablet@2x.jpg);
       max-width: 768px;
     }
   }
@@ -973,6 +969,14 @@ p {
 
   .logo {
     margin-right: 120px;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .hero {
+    padding: 112px 0;
   }
 }
 
@@ -1068,6 +1072,8 @@ p {
 
   .container-footer {
     flex-direction: row;
+    align-items: baseline;
+    gap: 0;
   }
 
   .footer-left {
@@ -1096,6 +1102,10 @@ p {
   }
 
   .address {
+    display: flex;
+  }
+
+  .nav-links {
     display: flex;
   }
 
@@ -1145,5 +1155,19 @@ p {
     width: 264px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     opacity: 1;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .hero {
+    padding: 188px 0;
+  }
+
+  .main-header {
+    font-size: 56px;
+    line-height: 107%;
+    max-width: 496px;
   }
 }
