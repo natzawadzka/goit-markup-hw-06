@@ -58,7 +58,6 @@ ul {
 .nav-links {
   display: flex;
   gap: 40px;
-  padding: 24px 0 24px 0;
   display: none;
 }
 
@@ -93,7 +92,6 @@ ul {
 
 .address {
   font-size: 16px;
-  line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
   text-decoration: none;
@@ -293,6 +291,12 @@ ul {
 
 .header-goals {
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
 }
 
 .goals-list:not(:last-child) {
@@ -611,7 +615,7 @@ ul {
   margin-left: 16px;
 }
 
-.modal-cotainer {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -620,6 +624,7 @@ ul {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
 }
 .modal-window {
   position: absolute;
@@ -798,7 +803,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 h1,
@@ -843,8 +848,20 @@ p {
     max-width: 768px;
   }
 
+  .main-header {
+    font-size: 56px;
+    line-height: 107%;
+    max-width: 496px;
+  }
+
   .contact {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-link {
+    font-size: 12px;
   }
 
   .section-goals {
@@ -858,6 +875,10 @@ p {
     width: 356px;
   }
 
+  .goals-list:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
   .icon-list {
     position: absolute;
     width: 1px;
@@ -869,6 +890,10 @@ p {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .header-goals {
+    text-align: left;
   }
 
   .team-list {
@@ -998,7 +1023,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 112px;
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
@@ -1019,9 +1043,7 @@ p {
     letter-spacing: 0.02em;
     color: #434455;
     margin: 0;
-  }
-  .header-goals {
-    margin-bottom: 8px;
+    font-weight: 400;
   }
 
   .second-section {
@@ -1169,5 +1191,28 @@ p {
     font-size: 56px;
     line-height: 107%;
     max-width: 496px;
+  }
+
+  .header-goals {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+
+  .goals-list:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .contact-link {
+    font-size: 16px;
+  }
+
+  .sm-container {
+    align-self: baseline;
   }
 }
